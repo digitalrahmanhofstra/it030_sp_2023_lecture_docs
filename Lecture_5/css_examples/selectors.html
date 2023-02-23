@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Using Selectors CSS</title>
+		<style type="text/css">
+			body {
+				font-family: arial;
+				background-color: black;
+				color: white;}
+			
+			/*Selects all div elements and all p elements*/
+			div, p {
+				color: blue;
+				font-size: 20px;}
+			
+			/*Selects all p elements*/
+			p{
+				color: red;
+			}
+
+			/*Selects all p elements inside div*/
+
+			div p {
+				color: yellow;
+				font-size: 20px;}
+			
+			/*Selects all p elements where the parent is a div*/
+			
+			div > p {
+				color: purple;
+				font-size: 20px;}
+			
+				}	
+		</style>
+			
+	</head>
+	
+	<body>
+		<h1>Using Selectors CSS</h1>
+
+        <p>
+        	I am just a p - red
+		</p>
+
+
+		<div> <!--Div open-->
+			<p>
+				My parent is a div - purple
+			</p>
+
+			<span>
+				
+				<p>
+					My parent is a span - yellow
+				</p>
+				<p>
+					My parent is a span - yellow
+				</p>
+			</span>
+		</div><!--Div close-->
+
+		<div>
+			I am just a div - blue
+		</div>
+
+	</body>
+</html>
