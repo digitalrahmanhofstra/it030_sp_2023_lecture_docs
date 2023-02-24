@@ -4,6 +4,7 @@
 		<title>Using Selectors CSS</title>
 		<style type="text/css">
 			body {
+				font-size:10px;
 				font-family: arial;
 				background-color: black;
 				color: white;}
@@ -18,10 +19,7 @@
 				color: white;
 				font-size: 20px;}
 
-			div, p {
-				color: blue;
-				font-size: 20px;}
-
+			
 			/*Selects all div elements and all p elements*/
 			div, p {
 				color: blue;
@@ -30,6 +28,16 @@
 			/*Selects all p elements*/
 			p{
 				color: red;
+			}
+
+			/*Selects all p elements with id intro*/
+			p#intro{
+				color: orange;
+			}
+
+			/*Selects all p elements with id intro*/
+			p#intro {
+				color: white !important;
 			}
 
 			/*Selects all p elements inside div*/
@@ -75,8 +83,16 @@
 				<p>
 					My parent is a span - yellow
 				</p>
+
 				<p>
 					My parent is a span - yellow
+				</p>
+				
+				<p id="intro">
+					My parent is a span - white (because of !important)
+				</p>
+				<p id="intro">
+					My parent is a span - (white because of !important)
 				</p>
 			</span>
 		</div><!--Div close-->
