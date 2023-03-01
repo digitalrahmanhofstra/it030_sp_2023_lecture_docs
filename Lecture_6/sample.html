@@ -1,0 +1,99 @@
+<!--sample-->
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Min Width Max Width</title>
+		<style type="text/css">
+			body {
+				font-family: Arial, Verdana, sans-serif;
+				color: #111111;}
+
+			/*START Style for: Display Property - Change Inline/Block*/
+
+			ul#mylist{
+
+				font-size: 20px;
+				border-bottom: 1px solid black;
+				margin-bottom: 70px;
+				margin-top: 70px;
+
+
+			}
+			ul#mylist li {
+				display: inline; /*display in line*/
+				margin-right: 10px;}
+
+			ul#mylist li.coming-soon {
+				display: none;} /*note display none*/
+
+			/*END Style for: Display Property - Change Inline/Block*/
+
+
+			/*-------------------------------------------------------*/
+
+			/*START Visibility Property - Hiding Boxes*/
+			#myBoxes {
+
+				border: 3px solid #ddd;
+				padding: 10px;
+
+			}
+
+			.myInnerBoxes{
+				background: #eee;
+				padding: 5px;
+				margin: 5px;
+			}
+
+			.myInnerBoxesMiddle{visibility: hidden}
+
+
+			/*END Visibility Property - Hiding Boxes/
+
+			</style>
+
+
+	</head>
+	<body>
+			
+		<h1>Display Property - Change Inline/Block</h1>
+
+			
+				<ul id="mylist">
+					<li>Home</li>
+					<li>Products</li>
+					<li class="coming-soon">Services</li>
+					<li>About</li>
+					<li>Contact</li>
+				</ul>
+
+
+		
+
+
+		<h1>Visibility Property - Hiding Boxes</h1>
+
+
+		<div id="myBoxes">
+
+				<div class="myInnerBoxes">
+				LEFT Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+				</div>
+
+				<div class="myInnerBoxesMiddle">
+				MIDDLE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+				</div>
+
+				<div class="myInnerBoxes">
+				RIGHT Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+				</div>
+
+				</div>
+
+
+
+
+	</body>
+</html>
