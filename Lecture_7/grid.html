@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML 5 CSS Grid demo</title>
+
+<style>
+
+ body{
+font-family: Verdana ;
+
+ }
+
+/*---------------------------------------------------------------------------*/
+
+.wrapper {
+  display: grid;
+  gap: 20px;
+  grid-template-areas:
+    "header"
+    "nav"
+    "section_content"
+    "content_one"
+    "sidebar"
+    "ad"
+    "footer";
+}
+ .main-head {
+    background: #000; /*black header*/
+    color: white;
+ }
+
+   nav ul {
+    display: flex; /*This defines a flex container - only declared once*/
+    justify-content: space-between;
+  }
+
+/*---------------------------------------------------------------------------*/
+
+@media only screen and (min-width: 640px) { /*The min width of screen has to be 640 px for this style to take effect*/
+  .wrapper {
+    grid-template-columns: 1fr 3fr; /*fr = fraction*/
+    grid-template-areas:
+      "header  header"
+      "nav     nav"
+      "sidebar section_content"
+      "sidebar content_one"
+      "ad      footer";
+  }
+
+
+  nav ul {
+    justify-content: space-between;
+  }
+
+
+   .main-head{
+    background: #ddd; /*gray*/
+    color: black;
+  }
+}
+
+
+/*---------------------------------------------------------------------------*/
+@media only screen and (min-width: 768px) /*and (max-width: 1023px)*/ {
+  .wrapper {
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-areas:
+      "header header  header"
+      "nav    section_content sidebar"
+      "nav    content_one ad"
+        "footer footer  footer";
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+   .main-head{background: #E5BCB3} /*pink*/
+}
+
+/*---------------------------------------------------------------------------*/
+
+@media only screen and (min-width: 1024px) /*and (max-width: 1023px)*/ {
+  .wrapper {
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-areas:
+      "header header  header"
+      "nav    section_content sidebar"
+      "nav    content_one ad"
+        "footer footer  footer";
+  }
+
+  nav ul {
+    flex-direction: column;
+
+  }
+  .main-head{background: #B3E1E5; /*light blue*/
+    color: black;}
+}
+
+/*---------------------------------------------------------------------------*/
+
+
+ .main-head {
+     grid-area: header;
+     border: 1px solid black;
+     padding: 5px;
+}
+ .section_content {
+     grid-area: section_content;
+     border: 1px solid black;
+     padding: 5px;
+}
+ .content_one {
+     grid-area: content_one;
+     border: 1px solid black;
+     padding: 5px;
+}
+ .main-nav {
+     grid-area: nav;
+     border: 1px solid black;
+     padding: 5px;
+}
+ .sidebar {
+     grid-area: sidebar;
+     border: 1px solid black;
+     padding: 5px;
+}
+ .ad {
+     grid-area: ad;
+     border: 1px solid black;
+     padding: 5px;
+}
+ .main-footer {
+     grid-area: footer;
+     border: 1px solid black;
+     padding: 5px;
+}
+ #content_img{
+     float: left;
+     padding: 10px;
+}
+
+
+</style>
+
+  </head>
+  <body>
+
+<div class="wrapper">
+
+  <header class="main-head">
+  	<h5>My header content goes here - Header</h5>
+
+		
+  </header>
+  
+  <nav class="main-nav">
+
+	 
+
+    <ul>
+      <li><a href="">Nav 1</a></li>
+      <li><a href="">Nav 2</a></li>
+      <li><a href="">Nav 3</a></li>
+    </ul>
+  </nav>
+
+  <section class="section_content">
+    <h1>Content Area</h1>
+  	
+    <img id= "content_img" src="box.jpg" width="100px" height="100px">
+
+    <p>
+      In this layout, we display the areas in source order for any screen less
+      that 500 pixels wide. We go to a two column layout, and then to a three
+      column layout by redefining the grid, and the placement of items on the
+      grid.
+    
+      In this layout, we display the areas in source order for any screen less
+      that 500 pixels wide. We go to a two column layout, and then to a three
+      column layout by redefining the grid, and the placement of items on the
+      grid.
+    </p>
+
+
+  </section>
+  <article class="content_one">
+    <h1>Content Area One</h1>
+
+
+	
+
+    <p>
+      In this layout, we display the areas in source order for any screen less
+      that 500 pixels wide. We go to a two column layout, and then to a three
+      column layout by redefining the grid, and the placement of items on the
+      grid.
+    </p>
+
+     <p>
+      In this layout, we display the areas in source order for any screen less
+      that 500 pixels wide. We go to a two column layout, and then to a three
+      column layout by redefining the grid, and the placement of items on the
+      grid.
+    </p>
+     <p>
+      In this layout, we display the areas in source order for any screen less
+      that 500 pixels wide. We go to a two column layout, and then to a three
+      column layout by redefining the grid, and the placement of items on the
+      grid.
+    </p>
+
+
+  </article>
+
+  <aside class="sidebar">Sidebar
+
+	  
+
+  </aside>
+  <div class="ad">Advertising
+
+	  
+
+  </div>
+  <footer class="main-footer">The footer
+
+
+
+
+  </footer>
+</div>
+
+
+  </body>
+</html>
