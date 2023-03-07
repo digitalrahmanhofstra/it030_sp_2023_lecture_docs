@@ -1,0 +1,100 @@
+body {
+     font-family: arial;
+
+}
+ h1 {
+     color: black;
+}
+
+nav, article, #sidebar, footer, #imageBox {
+    border: 1px solid #ddd;
+     padding: 15px;
+
+}
+ nav, article, footer, #imageBox {
+    background: #eee;
+}
+
+/*----------------------------Below is the catch all CSS -----------------------------------------------*/
+
+/*Define the basic*/
+
+#content {
+  display: grid; /*#content will be a grid*/
+  gap: 20px; /* 20 px gutter between boxes*/
+
+    grid-template-columns: 3fr 1fr; /*fr = fraction*/  /* number of columns and how its split*/
+      grid-template-areas: /* Define the areas and what they are called*/
+    "nav"
+    "article"
+    "sidebar"
+    "imageBox"
+    "footer";
+}
+
+ nav ul {
+      display: flex; /*This defines a flex container - only declared once*/
+      justify-content: space-between;
+      list-style: none;
+    }  
+
+#imageBox { 
+      display: flex; /*This defines a flex container - only declared once*/
+      flex-wrap: wrap;
+   }  
+
+article {
+     grid-area: article; /*  <section class="article"> */
+     border: 1px solid black;
+     padding: 5px;
+}
+
+#sidebar {
+     grid-area: sidebarz; /*  <div id="sidebar">*/
+     border: 1px solid black;
+     padding: 5px;
+}
+#mainNav {
+     grid-area: nav; 
+     border: 1px solid black;
+     padding: 5px;
+}
+#imageBox {
+     grid-area: imageBox; 
+     border: 1px solid black;
+     padding: 5px;
+}
+#imageBox{
+     clear: both;
+     height: 250px;
+}
+ #imageBox figure{
+    float: left;
+     width: 200px;
+     margin: 0 10px 0 0;
+}
+ #imageBoxContent {
+    float: left;
+     width: 600px;
+}
+
+
+footer {
+     grid-area: footer; /*  <section class="article"> */
+     border: 1px solid black;
+     padding: 5px;
+}
+
+@media only screen and (min-width: 1024px) { /*The min width of screen has to be 640 px for this style to take effect*/
+
+#content {
+
+grid-template-areas:
+      "nav         nav"
+      "article     sidebar"
+      "imageBox    sidebar"
+      "footer      footer";
+}
+
+}
+

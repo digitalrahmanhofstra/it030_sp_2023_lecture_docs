@@ -1,0 +1,70 @@
+body {
+     font-family: arial;
+     background-color: white;
+}
+ h1 {
+     color: black;
+}
+ #content, #nav, #article, #sidebar, #footer, #imageBox {
+    border: 1px solid #ddd;
+     padding: 5px;
+    margin: 10px;
+}
+ #nav, #article, #footer, #imageBox {
+    background: #eee;
+}
+ #content{
+    width: 960px;
+    margin: 0 auto;
+}
+ #article, #footer {
+    padding: 10px;
+}
+ #nav ul li {
+    display: inline;
+     width: 200px;
+     margin-right: 10px;
+}
+ #article {
+     float: left;
+     width: 620px;
+}
+ button.myButton {
+    color: black;
+     padding: 5px;
+     font-size: 14px;
+     float: right;
+}
+ button.myButton:hover {
+    color: white;
+     background: black;
+}
+ #sidebar{
+     float: left;
+     width: 260px;
+}
+ .sidebarList li {
+    margin: 10px;
+}
+ #comingSoon {
+    display: none;
+}
+ #imageBox{
+     clear: both;
+     height: 250px;
+}
+ #imageBox figure{
+    float: left;
+     width: 200px;
+     margin: 0 10px 0 0;
+}
+ #imageBoxContent {
+    float: left;
+     width: 600px;
+}
+ #footer {
+     height: 200px;
+     background-color: #eee;
+     overflow: scroll;
+}
+.blueText{color: blue;}
