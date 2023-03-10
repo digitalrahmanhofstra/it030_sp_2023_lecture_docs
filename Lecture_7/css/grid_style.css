@@ -13,69 +13,124 @@ body {
 }
 /*----------------------------Below is the catch all CSS -----------------------------------------------*/
 /*Define the basic*/
- .content {
+ .grid {
      display: grid;
-    /*.content will be a grid*/
+
      gap: 20px;
-    /* 20 px gutter between boxes*/
      grid-template-areas: "nav" "article" "second_sidebar" "imageBox" "sidebar" "footer";
 }
- nav ul {
-     display: flex;
-    /*This defines a flex container - only declared once*/
-     justify-content: space-between;
-     list-style: none;
+
+nav li{
+display:inline-block;
+ 
+
+}
+nav li a{
+       display:block;  
+    padding:10px;  
+    color:#eee;  
+    text-decoration:none;
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 640px) { /*The min width of screen has to be 640 px for this style to take effect*/
+nav li a:hover{
+       display:block;  
+    padding:10px;  
+    color:gray;  
 
-     .content {
-        grid-template-columns: 3fr 1fr;
+    text-decoration:none;
+}
+
+ nav ul {
+    display: flex;
+     flex-direction: row; 
+     justify-content: space-evenly;
+ 
+     flex-wrap: wrap;
+
+    list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.flex-container > div {
+  width: 300px;
+  margin: 1px;
+}
+
+.flex-container > figure {
+    width: 200px;
+}
+
+
+    @media all and (min-width: 576px) { /*CSS kicks in when the device width is 576px and above*/
+
+     .grid {
+        
+        grid-template-columns: 1fr 2fr; /*This does not feel right is the column width OK?*/
          grid-template-areas: 
          "nav nav" 
-         "article sidebar " 
+         "article article " 
          "imageBox second_sidebar " 
-         "footer footer ";
+         /*What is missing here?*/
     }
-}
 
+         #sidebar {
+          display: none;
+        }
+
+}
 
 /* Medium devices (landscape tablets, 768px and up) */
- @media only screen and (min-width: 768px) {
-     .content {
-         grid-template-columns: 2fr 2fr;
-         grid-template-areas: 
-         "nav nav" 
-         "article second_sidebar " 
-         "imageBox sidebar " 
-         "footer footer ";
-    }
+    @media all and (min-width: 768px) and (max-width: 1023px){ /*CSS kicks in when the device width is 768px and above*/
+ 
+        /*This break point needs a .grid -- hint: copy from another breakpoint 
+            and change as needed
+        */
+
+
+ #sidebar {
+         display: inherit;
+        }
+
 }
- @media only screen and (min-width: 1024px) {
+
+    @media all and (min-width: 1024px) { /*CSS kicks in when the device width is 1024px and above*/
     /* Large devices (laptops/desktops, 1024px and up) */
-     .content {
+     .grid {
          grid-template-columns: 3fr 1fr 1fr;
         /*fr = fraction*/
-        /* number of columns and how its split*/
+        /* Hint : 3fr 1fr 1fr; are the number of columns and how they are split*/
          grid-template-areas: 
-         "nav nav nav" 
+
+         /*what is missing here*/
+
          "article second_sidebar sidebar" 
          "imageBox second_sidebar sidebar" 
          "footer footer footer";
     }
+
+     #sidebar {
+         display: inherit;
+        }
 }
+
+
  
  #imageBox {
      display: flex;
-    /*This defines a flex container - only declared once*/
      flex-wrap: wrap;
 }
  article {
      grid-area: article;
     /* <section class="article"> */
      border: 1px solid black;
-     padding: 5px;
+     padding: 10px;
 }
  #sidebar {
      grid-area: sidebar;
@@ -85,32 +140,34 @@ body {
 }
  #second_sidebar {
      grid-area: second_sidebar;
-    /* <div id="sidebar">*/
+
      border: 1px solid black;
      padding: 5px;
 }
  #mainNav {
      grid-area: nav;
-     border: 1px solid black;
+     background-color: black;
+     border-bottom: 4px solid #ddd;
      padding: 5px;
 }
  #imageBox {
      grid-area: imageBox;
      border: 1px solid black;
+     width: 100%;
      padding: 5px;
 }
  #imageBox figure{
      float: left;
-     width: 200px;
+
      margin: 0 10px 0 0;
 }
  #imageBoxContent {
      float: left;
-     width: 400px;
+
 }
  footer {
      grid-area: footer;
     /* <section class="article"> */
      border: 1px solid black;
-     padding: 5px;
+     padding: 10px;
 }

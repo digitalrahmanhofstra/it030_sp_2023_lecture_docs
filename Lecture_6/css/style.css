@@ -20,7 +20,7 @@ body {
  #article, #footer {
     padding: 10px;
 }
- #nav ul li {
+ #nav ul li{
     display: inline;
      width: 200px;
      margin-right: 10px;
@@ -41,7 +41,7 @@ body {
 }
  #sidebar{
      float: left;
-     width: 260px;
+     width: 265px;
 }
  .sidebarList li {
     margin: 10px;
