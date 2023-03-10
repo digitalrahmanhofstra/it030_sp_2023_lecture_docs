@@ -75,6 +75,12 @@ body {
      grid-area: article;
     /* <section class="article"> */
      border: 1px solid black;
+     padding: 10px;
+}
+#sidebar {
+     grid-area: sidebar; /*  <div id="sidebar">*/
+
+     border: 1px solid black;
      padding: 5px;
 }
  #sidebar {
