@@ -9,6 +9,8 @@
 
       <div>
 
+
+
         <script type="text/javascript">
           
             function hello() {
@@ -76,6 +78,42 @@
       <div class="message">Color: <span id="colors">We were unable to find your color choice. Please try again...</span></div>
 
        <script src="js/script.js"></script>
+
+
+
+    <h3>JS BOM: Windows.Navigator</h3>
+
+      <p id="demo"></p>
+
+      <script> //this script gets the navigator.userAgent and replaces the INNER HTML of the div whose ID is demo.  
+        document.getElementById("demo").innerHTML =
+        "navigator.userAgent is " + navigator.userAgent;
+
+      function checkLanguage() {
+          alert("Your browser's UI language is: " + navigator.language);
+      }
+      </script>
+ 
+      <button type="button" onclick="checkLanguage();">Check Language</button>
+
+
+
+<script>
+function checkConnectionStatus() {
+    if(navigator.onLine) {
+        alert("Application is online.");
+    } else {
+        alert("Application is offline.");
+    }
+}
+
+
+
+</script>
+ 
+<button type="button" onclick="checkConnectionStatus();">Check Connection Status</button>
+
+
 
 
   </div>
