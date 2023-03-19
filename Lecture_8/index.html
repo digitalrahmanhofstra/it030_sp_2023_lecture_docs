@@ -86,14 +86,24 @@
       <p id="demo"></p>
 
       <script> //this script gets the navigator.userAgent and replaces the INNER HTML of the div whose ID is demo.  
-        document.getElementById("demo").innerHTML =
-        "navigator.userAgent is " + navigator.userAgent;
+        document.getElementById("demo").innerHTML ="navigator.userAgent is " + navigator.userAgent;
+
+
+
 
       function checkLanguage() {
           alert("Your browser's UI language is: " + navigator.language);
-      }
+      
+
+        var myLanguage = navigator.language;
+
+        return myLanguage;
+          }
       </script>
  
+
+
+
       <button type="button" onclick="checkLanguage();">Check Language</button>
 
 

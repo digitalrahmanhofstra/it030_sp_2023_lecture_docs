@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="This is a starter test file for practicing html markup for the IT030 course">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Professor Rahman">
+  <title>JS Sandbox</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  
+  </head>
+
+  <body>
+    
+
+<!-- ***************** GET THE BROWSER WIDTH ******************************* -->
+    
+    <script type="text/javascript">
+      
+    var w = window.innerWidth;
+
+    console.log (w);
+
+    </script>
+
+
+
+<!-- ************************************************ -->
+
+<div id="myCoolDivId">I am some text</div> 
+
+  <script type="text/javascript"> 
+
+  //Set a div with some text or leave as blank
+
+  //Identify the ID, get the inner HTML and replace it with the value after =   
+
+  document.getElementById("myCoolDivId").innerHTML ="The Date is " + new Date().getDate(); 
+
+  </script>
+
+
+<!-- ************************************************ -->
+
+
+<div id="myOtherCoolDivId">I am some text</div> 
+
+<div id="myAnotherCoolDivId">Placeholder text</div> 
+
+  <script type="text/javascript"> 
+
+    var hours = new Date().getHours();
+
+    document.getElementById("myAnotherCoolDivId").innerHTML ="Hours: " + hours; //using a variable as the value declared before
+
+
+//************************************************
+
+
+    if(hours<12) {
+
+      document.getElementById("myOtherCoolDivId").textContent = 'It is Morning and the time is:' + hours + ', thanks';
+
+          
+          } else if (hours === 7) {
+
+     document.getElementById("myOtherCoolDivId").innerHTML = "Its Evening";
+
+          } else if (hours > 12) {
+
+     document.getElementById("myOtherCoolDivId").innerHTML = "Its Not Morning, and the time is" + hours + ", thanks";
+
+    } 
+
+          else {
+
+     document.getElementById("myOtherCoolDivId").innerHTML = "I dont know what the time is, Sorry!";
+
+    }
+
+  </script>
+
+<!-- ************************************************ -->
+
+<Div>
+
+Lorem ipsum dolor sit amet, consectetur <b>adipisicing</b> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</Div>
+
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+    <h3>Sample JS Event</h3>
+
+    <ul>
+
+      <!-- the below on click events are controlled by external js file-->
+
+      
+      <!-- This function below, hello() takes an argument, in this instance we are passing "Howdy" -->
+      <li><button onclick="hello('Howdy!')">Click me please</button></li> 
+
+
+
+      <!-- Note what happens when we dont pass in an argument to the hello function-->
+      <li><button ondblclick="hello()">Double click on me, I dare you!</button></li> 
+
+    </ul>
+  </body>
+
+
+<script src="js/script.js"></script>
+
+
+
+</html>
