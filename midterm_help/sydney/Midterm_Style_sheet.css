@@ -1,0 +1,209 @@
+@media screen and (min-width: 576px) {
+* {
+    font-family: arial, verdana, sans-serif;
+}
+body {
+    color: black;
+    width: 960px;
+    border: 1px solid black;
+    margin: 6px;
+    padding: 5px;
+}
+
+ .grid {
+    word-spacing: 2px;
+    background-color: #eee;
+    border: 1px solid black;
+    font-size: 12px;
+    color: black;
+    height: 100px;
+    width: 935px;
+    margin: 6px;
+    padding: 5px;
+}
+
+ li {
+    display: inline;
+}
+ h1, h2{
+     color: black;
+}
+article {
+    float: left;
+    background-color: #eee;
+    border: 1px solid black;
+    font-size: 12px;
+    height: 530px;
+    width: 935px;
+    margin: 6px;
+    padding: 5px;
+}
+.flex-container {
+    float: left;
+    height: 420px;
+    width: 651px;
+    border: 1px solid black;
+    background-color: #eee;
+    font-size: 12px;
+    margin: 6px;
+    padding: 5px;
+}
+#second_sidebar {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    float: right;
+    border: 1px solid black;
+    height: 420px;
+    margin: 6px;
+    padding: 5px;
+    width: 260px;
+}
+#sidebar {
+display: none;
+}
+ .flex-container #description {
+    vertical-align: center;
+}
+img {
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+}
+footer {
+    font-size: 12px;
+    border: 1px solid black;
+    height: 170px;
+    width: 935px;
+    background-color: #eee;
+    overflow: scroll; 
+    margin: 6px;
+    padding: 5px;
+}
+}
+
+@media screen and (min-width: 768px) {
+* {
+    font-family: arial, verdana, sans-serif;
+}
+body {
+     color: black;
+     width: 960px;
+     border: 1px solid black;
+     margin: 6px;
+     padding: 5px;
+}
+ .grid {
+    word-spacing: 2px;
+    background-color: #eee;
+    border: 1px solid black;
+    font-size: 12px;
+    color: black;
+    height: 100px;
+    max-width: 960px;
+    margin: 6px;
+    padding: 5px;
+}
+ li {
+    display: inline;
+}
+ h1, h2{
+     color: black;
+}
+ .Home {
+    float: left;
+    background-color: #eee;
+    border: 1px solid black;
+    font-size: 12px;
+    height: 720px;
+    width: 691px;
+    margin: 6px;
+    padding: 5px;
+}
+ #About_first_sidebar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    border: 1px solid black;
+    height: 720px;
+    margin: 6px;
+    padding: 5px;
+    width: 221px;
+}
+ #About_second_sidebar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    border: 1px solid black;
+    height: 720px;
+    margin: 6px;
+    padding: 5px;
+    width: 221px;
+}
+ .Second_flex-container {
+    float: left;
+    height: 222px;
+    width: 691px;
+    border: 1px solid black;
+    background-color: #eee;
+    font-size: 12px;
+    margin: 6px;
+    padding: 5px;
+}
+ .flex-container #description {
+    vertical-align: center;
+}
+ img {
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+}
+ #sidebar {
+    display: flex;
+    float: right;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    margin: 6px;
+    padding: 5px;
+    height: 222px;
+    width: 221px;
+}
+ footer {
+    font-size: 12px;
+    border: 1px solid black;
+    height: 170px;
+    width: 935px;
+    background-color: #eee;
+    overflow: scroll; 
+    margin: 6px;
+    padding: 5px;
+}
+}
+
+@media screen and (min-width: 1028px) {
+article {
+    width: 528px;
+    height: 700px;
+    float: left;
+    border: 1px solid black;
+    font-size: 12px;
+    margin: 6px;
+    padding: 5px;
+}
+#Portfolio_first_sidebar{
+    height: 944px;
+    width: 180px;
+}
+#Portfolio_second_sidebar {
+    width: 180px;
+    height: 944px;
+}
+.Second_flex-container {
+    width: 528px;
+    position: absolute;
+    top: 858px;
+}
+}
