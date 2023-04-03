@@ -1,139 +1,91 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="This is a starter test file for practicing JavaScript markup for the IT030 course">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
-    <meta name="author" content="Professor Rahman">
-  <title>Lecture 8 Javascript</title>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="description" content="This is a starter test file for practicing html markup for the IT030 course">
+      <meta name="keywords" content="HTML, CSS, JavaScript">
+      <meta name="author" content="Professor Rahman">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <div>
+      <title>CSS Layout and Responsive Design</title>
+      <link href="css/style.css" type="text/css" rel="stylesheet" />
+   </head>
+   <body>
+      <div class="grid">
+           <nav id="mainNav">
+            <ul>
+               <li><a href=#>Home</a></li>
+               <li><a href=#>About</a></li>
+               <li><a href=#>Services</a></li>
+               <li><a href=#>Contact</a></li>
+               <li><a href=#>Shop</a></li>
+               <li><a href=#>Support</a></li>
+            </ul>
+         </nav>
 
+           <article>
+            <h2>Using media queries and grid css</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p class="blueText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+         </article>
 
+         <div id="sidebar">
+            <h1>Aside 1</h1>
 
-        <script type="text/javascript">
-          
-            function hello() {
+         </div>
 
-              alert('Hello, world!');
+          <div id="second_sidebar">
+         <h1>Aside 2</h1>
 
-            }
-
-
-            // prototype object - THIS IS A USER DEFINED OBJECT
-            
-            let person = {
-              firstname: "Bob",
-              lastname: "Smith",
-              fullName: function() {
-                return "My name is " + this.firstname + " " + this.lastname;
-              }
-            }
-
-            console.log(person.fullName());
-
-
-            // create a new object
-            let newPerson = Object.create(person);
-            // change the value of the new object
-            newPerson.firstname = "John";
-            newPerson.lastname = "Smith";
-
-            console.log(newPerson.fullName());
-
-
-
-           
-        </script>
-
-
-
-
-
-      </div>
-
-
-  </head>
-
-  <body>
-
-    <h3>Sample JS Event</h3>
-
-    <ul>
-
-      <li><button onclick="hello()">Click me please</button></li>
-
-
-
-      <li><button ondblclick="hello()">Double click on me, I dare you!</button></li>
-
-    </ul>
-
-
-
-    <h3>Variables / Array</h3>
-
-
-     <div id="content">
-      <div class="message">Color: <span id="colors">We were unable to find your color choice. Please try again...</span></div>
-
-       <script src="js/script.js"></script>
-
-
-
-    <h3>JS BOM: Windows.Navigator</h3>
-
-      <p id="demo"></p>
-
-      <script> //this script gets the navigator.userAgent and replaces the INNER HTML of the div whose ID is demo.  
-        document.getElementById("demo").innerHTML ="navigator.userAgent is " + navigator.userAgent;
-
-
-
-
-      function checkLanguage() {
-          alert("Your browser's UI language is: " + navigator.language);
-      
-
-        var myLanguage = navigator.language;
-
-        return myLanguage;
-          }
-      </script>
- 
-
-
-
-      <button type="button" onclick="checkLanguage();">Check Language</button>
-
-
-
-<script>
-function checkConnectionStatus() {
-    if(navigator.onLine) {
-        alert("Application is online.");
-    } else {
-        alert("Application is offline.");
-    }
-}
-
-
-
-</script>
- 
-<button type="button" onclick="checkConnectionStatus();">Check Connection Status</button>
-
-    <h3>JS DOM: Windows Get Element</h3>
-
-
-
-  <div id="bob">Hello I am bob</div>
-
+         </div>
+<div class="flex-container">
+   <div>
+<figure>
+               <img 
+                  src="images/bear.jpg" 
+                  alt="BMW Race Car" 
+                  title="The bmw racecar is a very fast car that can go fast, and even faster if you sit in it."
+                  />
+               <p>
+                  <figcaption>
+                     Photo by <a href="https://unsplash.com/@s_tsuchiya?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">S. Tsuchiya</a> on <a href="https://unsplash.com/photos/XP77927UGxE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   
+                  </figcaption>
+            </figure></div>
+  
+
+  <div>
+
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
 
   </div>
 
 
-  </body>
+</div>
 
+
+         <footer>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                                                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                                                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+     </div>
+   </body>
 </html>

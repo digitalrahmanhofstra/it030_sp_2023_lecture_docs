@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="This is a starter test file for practicing JavaScript markup for the IT030 course">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Professor Rahman">
+  <title>Lecture 8 Javascript</title>
+
+      <div>
+
+
+
+        <script type="text/javascript">
+          
+            function hello() {
+
+              alert('Hello, world!');
+
+            }
+
+
+            // prototype object - THIS IS A USER DEFINED OBJECT
+            
+            let person = {
+              firstname: "Bob",
+              lastname: "Smith",
+              fullName: function() {
+                return "My name is " + this.firstname + " " + this.lastname;
+              }
+            }
+
+            console.log(person.fullName());
+
+
+            // create a new object
+            let newPerson = Object.create(person);
+            // change the value of the new object
+            newPerson.firstname = "John";
+            newPerson.lastname = "Smith";
+
+            console.log(newPerson.fullName());
+
+
+
+           
+        </script>
+
+
+
+
+
+      </div>
+
+
+  </head>
+
+  <body>
+
+    <h3>Sample JS Event</h3>
+
+    <ul>
+
+      <li><button onclick="hello()">Click me please</button></li>
+
+
+
+      <li><button ondblclick="hello()">Double click on me, I dare you!</button></li>
+
+    </ul>
+
+
+
+    <h3>Variables / Array</h3>
+
+
+     <div id="content">
+      <div class="message">Color: <span id="colors">We were unable to find your color choice. Please try again...</span></div>
+
+       <script src="js/script.js"></script>
+
+
+
+    <h3>JS BOM: Windows.Navigator</h3>
+
+      <p id="demo"></p>
+
+      <script> //this script gets the navigator.userAgent and replaces the INNER HTML of the div whose ID is demo.  
+        document.getElementById("demo").innerHTML ="navigator.userAgent is " + navigator.userAgent;
+
+
+
+
+      function checkLanguage() {
+          alert("Your browser's UI language is: " + navigator.language);
+      
+
+        var myLanguage = navigator.language;
+
+        return myLanguage;
+          }
+      </script>
+ 
+
+
+
+      <button type="button" onclick="checkLanguage();">Check Language</button>
+
+
+
+<script>
+function checkConnectionStatus() {
+    if(navigator.onLine) {
+        alert("Application is online.");
+    } else {
+        alert("Application is offline.");
+    }
+}
+
+
+
+</script>
+ 
+<button type="button" onclick="checkConnectionStatus();">Check Connection Status</button>
+
+    <h3>JS DOM: Windows Get Element</h3>
+
+
+
+  <div id="bob">Hello I am bob</div>
+
+  
+
+  </div>
+
+
+  </body>
+
+</html>
